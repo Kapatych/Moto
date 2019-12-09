@@ -1,0 +1,76 @@
+.colors {
+    &__name {
+        font-size: 1.2rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        cursor: pointer;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 4.5rem;
+        padding: 4px;
+        margin: 10px;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &_active {
+            border: 1px solid #dddddd;
+
+        }
+    }
+
+    &__item-color {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 3.5rem;
+
+        /*****       Colors           *****/
+
+        &[data-color=multicolor] {
+            background: conic-gradient(red, orange, yellow, lime, deepskyblue,  blue, violet);
+        }
+        &[data-color=black] {
+            background-color: black;
+        }
+        &[data-color=white] {
+            background-color: white;
+            border: 1px solid #dddddd;
+        }
+        &[data-color=silver] {
+            background-color: silver;
+        }
+        &[data-color=orange] {
+            background-color: orange;
+        }
+        &[data-color=yellow] {
+            background-color: yellow;
+        }
+        &[data-color=red] {
+            background-color: red;
+        }
+        &[data-color=blue] {
+            background-color: blue;
+        }
+        &[data-color=chrome] {
+            background-color: whitesmoke;
+        }
+        &[data-color=matte-black] {
+            background-color: #3A3A3A;
+        }
+        &[data-color=matte-titanium] {
+            background-color: lightgrey;
+        }
+    }
+}
+
+
+

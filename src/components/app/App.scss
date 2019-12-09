@@ -1,0 +1,63 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.wide-column {
+    flex-grow: 1;
+    max-width: 1475px;
+    padding: 4.5rem 10rem 9rem;
+    background: #f4f4f4;
+}
+
+.narrow-column {
+    flex-basis: 23.2%;
+    border-top: 1px solid #dddddd;
+}
+
+.title {
+    color: #404040;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+}
+
+.link {
+    color: #ff4f37;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.button {
+    box-shadow: 2px 14px 16px rgba(0, 0, 0, .15);
+    background-color: #ff4f37;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ff553a;
+        box-shadow: 1.5px 10px 12px rgba(0, 0, 0, .2);
+    }
+}
+
+.price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3rem;
+    text-transform: uppercase;
+}

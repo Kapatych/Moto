@@ -1,0 +1,40 @@
+.cart__item {
+  &-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-thumb {
+    width: 5rem;
+    height: auto;
+    padding: .8rem 1rem;
+    background-color: #ededed;
+  }
+
+  &-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #404040;
+  }
+
+  &-count {
+    background-color: #f4f4f4;
+    width: 6.5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .cart__counter {
+
+    padding: 2rem 0;
+
+    .counter__quantity {
+      border: 1px solid #ddd;
+    }
+  }
+}

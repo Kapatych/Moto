@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+  font-size: 10px;
+}
+body {
+  font-family: Montserrat;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}

@@ -1,0 +1,24 @@
+.filter {
+    padding: 4.5rem 5rem;
+    /*position: sticky;
+    top: 0;*/
+}
+
+.brand {
+    &__item {
+        color: #404040;
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        cursor: pointer;
+        padding: 2.5rem 0;
+
+        &:hover {
+            color: #ff4f37;
+        }
+        &_active {
+            background-color: #f4f4f4;
+        }
+    }
+}

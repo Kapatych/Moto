@@ -1,0 +1,28 @@
+.catalog {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+
+    &__top-block {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 4rem 0;
+        padding: 0 0 2rem 0;
+        align-items: center;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    &__title {
+        color: #404040;
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+    }
+}

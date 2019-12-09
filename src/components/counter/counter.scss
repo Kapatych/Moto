@@ -1,0 +1,28 @@
+.counter {
+  display: flex;
+  justify-content: center;
+
+  &__decrease, &__increase {
+    /*border: 1px solid #dddddd;*/
+    border: none;
+    background-color: transparent;
+    padding: 2rem;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__quantity {
+    color: #404040;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    /*border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;*/
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

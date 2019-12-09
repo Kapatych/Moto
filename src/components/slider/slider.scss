@@ -1,0 +1,46 @@
+.slider {
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        height: 100%;
+    }
+    &__content {
+        flex-grow: 1;
+        text-align: center;
+    }
+    &__content img {
+        max-width: 60rem;
+    }
+    &__dots {
+        display: flex;
+        justify-content: center;
+    }
+    &__dots-item {
+        border: none;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 1rem;
+        background-color: #404040;
+        padding: .5rem;
+        margin: 1rem;
+        cursor: pointer;
+        &_active {
+            background-color: #ff4f37;
+        }
+    }
+    &__prev:after {
+        content: url("../../assets/images/arrow_left.png");
+        display: block;
+    }
+    &__next:after {
+        content: url("../../assets/images/arrow_right.png");
+        display: block;
+    }
+
+}

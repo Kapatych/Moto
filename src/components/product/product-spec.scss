@@ -1,0 +1,43 @@
+.product {
+    &__specifications {
+        border-top: 1px solid #000; /*TODO delete*/
+        max-width: 84.5rem;
+        margin: 0 auto;
+        padding: 8rem 0 0 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__preferences {
+        display: flex;
+        justify-content: space-around;
+
+       &-item {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           align-items: center;
+
+           div{
+               margin-top: 20px;
+           }
+
+           img{
+               /*   height: 50px;*/
+           }
+       }
+    }
+
+    &__description {
+        color: #404040;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: 1.4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}

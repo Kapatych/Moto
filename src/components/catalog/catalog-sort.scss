@@ -1,0 +1,24 @@
+.sort {
+    &__title {
+        color: #404040;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        margin-right: 2rem;
+    }
+
+    &__select {
+        height: 4.5rem;
+        border: 1px solid #dddddd;
+        background-color: #f4f4f4;
+        color: #404040;
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        padding: 0 0 0 20px;
+        width: 17.5rem;
+
+    }
+}
