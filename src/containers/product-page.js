@@ -22,24 +22,25 @@ class ProductPage extends Component {
             isLoading,
             isError,
             addProductToCart,
+            cartItems,
             history:{goBack}} = this.props;
-
         if (isError) {
             return <ErrorIndicator />
         }
         if (isLoading) {
             return <Spinner/>
         }
-        return <Product product={product} onGoBack={goBack} onAddedToCart={addProductToCart}/>
+        return <Product product={product} onGoBack={goBack} onAddedToCart={addProductToCart} cartItems={cartItems}/>
 
     }
 }
 
-const mapStateToProps = ({product: {product, isLoading, isError, selected}}) => {
+const mapStateToProps = ({product: {product, isLoading, isError}, cart:{cartItems}}) => {
     return {
         product,
         isLoading,
         isError,
+        cartItems
     }
 };
 

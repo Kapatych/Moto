@@ -43,7 +43,7 @@ const Index = ({children}) => {
                             <button onClick={showImage}
                                     key={idx}
                                     className={`slider__dots-item${(idx === active) ? ' slider__dots-item_active' : ''}`}
-                                    data-index={idx}> </button>
+                                    data-index={idx} />
                         )
                     })
                 }

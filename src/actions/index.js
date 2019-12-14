@@ -11,7 +11,8 @@ import {
     ADD_PRODUCT_FILTER,
     ADD_ACTIVE_CATEGORY,
     CHANGE_SORT_TYPE,
-    ADD_PRODUCT_TO_CART, DELETE_PRODUCT_FROM_CART, CHANGE_PRODUCT_QUANTITY, REMOVE_PRODUCT_FROM_CART
+    ADD_PRODUCT_TO_CART, DELETE_PRODUCT_FROM_CART, CHANGE_PRODUCT_QUANTITY, REMOVE_PRODUCT_FROM_CART,
+    SEARCH_PRODUCT, CLEAR_SEARCH, DELETE_ALL_FILTERS
 
 
 } from '../action-types'
@@ -39,6 +40,18 @@ export const addProductFilter = (filter) => {
     return {
         type: ADD_PRODUCT_FILTER,
         payload: filter
+    }
+};
+
+export const deleteAllFilters = () => {
+    return {
+        type: DELETE_ALL_FILTERS,
+    }
+};
+
+export const clearSearch = () => {
+    return {
+        type: CLEAR_SEARCH,
     }
 };
 
@@ -117,5 +130,15 @@ export const deleteProductFromCart = (product) => {
     return {
         type: DELETE_PRODUCT_FROM_CART,
         payload: product
+    }
+};
+
+
+/*  search  */
+
+export const searchProduct = (text) => {
+    return {
+        type: SEARCH_PRODUCT,
+        payload: text
     }
 };

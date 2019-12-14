@@ -3,17 +3,23 @@ import {connect} from 'react-redux';
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 
-import {addProductFilter, fetchHelmets, fetchCategories, fetchActiveCategory, changeSortType} from "../actions";
 import {
-    getFilteredHelmets,
-    getHelmetsFilters
-} from "../selectors";
+    addProductFilter,
+    fetchHelmets,
+    fetchCategories,
+    fetchActiveCategory,
+    changeSortType,
+    clearSearch,
+    deleteAllFilters
+} from "../actions";
+
+import {getFilteredHelmets, getFilters} from "../selectors";
 
 import Spinner from "../components/spinner";
 import ErrorIndicator from "../components/error/error-indicator";
 import Catalog from "../components/catalog/catalog";
 
-class CatalogPage extends Component{
+class CatalogPage extends Component {
 
     componentDidMount() {
         this.props.fetchHelmets();
@@ -27,9 +33,21 @@ class CatalogPage extends Component{
         if (this.props.match.params.categoryName !== prevProps.match.params.categoryName) {
             this.props.fetchActiveCategory(this.props.match.params.categoryName || '')
         }
+        //TODO: fix it
+        if (prevProps.location.pathname === '/search' && this.props.location.pathname !== '/search') {
+            this.props.clearSearch();
+        }
+        if (prevProps.location.pathname !== this.props.location.pathname) {
+            this.props.deleteAllFilters();
+        }
+    }
+
+    componentWillUnmount() {
+        this.props.clearSearch();
     }
 
     render() {
+
         const {
             isLoading,
             isError,
@@ -40,11 +58,11 @@ class CatalogPage extends Component{
             changeSortType,
         } = this.props;
 
-        if (isLoading){
-            return <Spinner />
+        if (isLoading) {
+            return <Spinner/>
         }
-        if (isError){
-            return <ErrorIndicator />
+        if (isError) {
+            return <ErrorIndicator/>
         }
 
         return (
@@ -58,24 +76,26 @@ class CatalogPage extends Component{
 }
 
 const mapStateToProps = (state) => {
-    const {catalog: {helmets, categories, isLoading, isError}, activeFilters} = state;
+    const {catalog: {categories, isLoading, isError}, activeFilters,} = state;
 
     return {
-        categories,
+        /* categories,*/
         isLoading,
         isError,
         activeFilters,
-        filteredHelmets: getFilteredHelmets(helmets, activeFilters, state),
-        filters: getHelmetsFilters(state),
+        filteredHelmets: getFilteredHelmets(state),
+        filters: getFilters(state),
     }
 };
 
 const mapDispatchToProps = {
     fetchHelmets,
     fetchCategories,
-    addProductFilter,
     fetchActiveCategory,
-    changeSortType
+    addProductFilter,
+    deleteAllFilters,
+    changeSortType,
+    clearSearch,
 };
 
 export default compose(

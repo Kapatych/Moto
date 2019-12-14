@@ -1,4 +1,11 @@
-import {ADD_PRODUCT_FILTER, ADD_ACTIVE_CATEGORY, CHANGE_SORT_TYPE} from "../action-types";
+import {
+    ADD_PRODUCT_FILTER,
+    ADD_ACTIVE_CATEGORY,
+    CHANGE_SORT_TYPE,
+    SEARCH_PRODUCT,
+    CLEAR_SEARCH,
+    DELETE_ALL_FILTERS
+} from "../action-types";
 
 
 const initialState = {
@@ -7,6 +14,7 @@ const initialState = {
     brand: [],
     color: [],
     size: [],
+    search: '',
 };
 
 const updateFilter = (state, type, value) => {
@@ -30,6 +38,8 @@ const activeFilters = (state = initialState, {type, payload}) => {
     switch (type) {
         case ADD_PRODUCT_FILTER:
             return updateFilter(state, payload.type, payload.value);
+        case DELETE_ALL_FILTERS:
+            return {...state, brand: [], color: [], size: []}
         case ADD_ACTIVE_CATEGORY:
             return {
                 ...state,
@@ -39,6 +49,16 @@ const activeFilters = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 sort: payload
+            };
+        case SEARCH_PRODUCT:
+            return {
+                ...state,
+                search: payload
+            };
+        case CLEAR_SEARCH:
+            return {
+                ...state,
+                search: ''
             };
         default:
             return state;

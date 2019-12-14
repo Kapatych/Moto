@@ -13,7 +13,13 @@ const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortT
             </div>
             <div className='wide-column '>
                 <div className='catalog__top-block'>
-                    <div className='catalog__title'>Categories</div>
+                    <div className='catalog__title'>
+                        {
+                            activeFilters.search ? `Results for '${activeFilters.search}'` :
+                            activeFilters.category ? activeFilters.category.split('-').join(' ') :
+                            'all helmets'
+                        }
+                    </div>
                     <CatalogSort activeFilters={activeFilters} changeSortType={changeSortType}/>
                 </div>
                 <div className='catalog__list'>

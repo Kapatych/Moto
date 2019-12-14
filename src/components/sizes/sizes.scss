@@ -19,7 +19,11 @@
         }
 
         &_active{
-            background-color: #f4f4f4;
+            background-color: #ff553a;
+            color: #ffffff;
+            &:hover {
+                color: #ffffff;
+            }
         }
     }
 

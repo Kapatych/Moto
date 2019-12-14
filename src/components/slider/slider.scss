@@ -34,13 +34,22 @@
             background-color: #ff4f37;
         }
     }
-    &__prev:after {
-        content: url("../../assets/images/arrow_left.png");
-        display: block;
+
+    &__prev:before {
+        font: normal normal normal 3rem FontAwesome;
+        content: "\f053";
+        display: inline-block;
     }
-    &__next:after {
-        content: url("../../assets/images/arrow_right.png");
-        display: block;
+    &__next:before {
+        font: normal normal normal 3rem FontAwesome;
+        content: "\f054";
+        display: inline-block;
+    }
+
+    &__prev:hover, &__next:hover {
+        &:before {
+            color: #ff4f37;
+        }
     }
 
 }

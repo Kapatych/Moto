@@ -1,47 +1,36 @@
 import React from 'react';
 import './header.scss';
 import {Link} from "react-router-dom";
+import Search from "../search/search";
 
-import icon_dropdown from '../../assets/images/icon-triangle-down.png';
-import icon_cart from '../../assets/images/icon-cart.png';
-import icon_auth from '../../assets/images/icon-user.png';
+const Header = ({quantity, searchProduct, deleteAllFilters, history}) => {
 
-
-const Index = () => {
     return (
-        <header>
-            <Link to='/' className='logo'>moto.</Link>
-            <nav className='menu'>
-                <Link to='/'>Home</Link>
-                <Link to='/blog'>Blog</Link>
-                <Link to='/catalog'>
-                    Catalog
-                    <img src={icon_dropdown} alt="" className='icon-dropdown'/>
-                </Link>
-                <Link to='/contact'>Contacts</Link>
+        <header className='header'>
+            <Link to='/' className='header__logo logo'>moto.</Link>
+
+            <nav className='header__menu menu'>
+                <Link to='/' className='menu__link'>Home</Link>
+                <Link to='/blog' className='menu__link'>Blog</Link>
+                <Link to='/catalog' className='menu__link dropdown'>Catalog</Link>
+                <Link to='/contact' className='menu__link'>Contacts</Link>
             </nav>
-            <div className='top-nav'>
-                <div className='currency'>
-                    usd
-                    <img src={icon_dropdown} alt="" className='icon-dropdown'/>
-                </div>
-                <div className='search'>
-                    <input type="text" placeholder='search'/>
-                </div>
-                <div className='cart-mini'>
-                    <Link to='/cart'>
-                        <img src={icon_cart} alt="" className='icon-cart'/>
-                    </Link>
-                </div>
-                <div className='auth'>
-                    <Link to='/auth'>
-                        <img src={icon_auth} alt="" className='icon-auth'/>
-                    </Link>
-                </div>
+
+            <div className='header__top'>
+                <div className='header__currency dropdown'>usd</div>
+
+                <Search searchProduct={searchProduct}
+                        history={history}
+                        deleteAllFilters={deleteAllFilters}/>
+
+                <Link to='/cart' className='header__cart'>{quantity}</Link>
+
+                <Link to='/auth' className='header__auth'/>
             </div>
+
 
         </header>
     )
 };
 
-export default Index;
+export default Header;

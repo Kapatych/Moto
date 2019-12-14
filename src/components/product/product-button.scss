@@ -1,0 +1,18 @@
+.product {
+  &__button {
+    padding: 2.5rem 5rem;
+    margin-top: 4rem;
+
+    &_active {
+      display: inline-block;
+
+      &:before {
+        font: normal normal normal 1.5rem FontAwesome;
+        color: #ffffff;
+        margin-right: 1rem;
+        content: "\f00c";
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,42 +1,40 @@
 .colors {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+
     &__name {
         font-size: 1.2rem;
     }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-    }
-
     &__item {
         cursor: pointer;
-        width: 4.5rem;
-        height: 4.5rem;
-        border-radius: 4.5rem;
-        padding: 4px;
-        margin: 10px;
+        width: 4rem;
+        height: 4rem;
 
         &:not(:last-child) {
-            margin-right: 1rem;
+            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        &_active {
-            border: 1px solid #dddddd;
-
+        &_active:before {
+            font: normal normal normal 1.5rem FontAwesome;
+            color: #ff4f37;
+            padding: 12px;
+            content: "\f00c";
+            display: inline-block;
         }
-    }
-
-    &__item-color {
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 3.5rem;
 
         /*****       Colors           *****/
 
         &[data-color=multicolor] {
             background: conic-gradient(red, orange, yellow, lime, deepskyblue,  blue, violet);
+            order: -1;
+            &.colors__item_active:before {
+                color: #ffffff;
+            }
         }
         &[data-color=black] {
             background-color: black;
@@ -44,6 +42,7 @@
         &[data-color=white] {
             background-color: white;
             border: 1px solid #dddddd;
+
         }
         &[data-color=silver] {
             background-color: silver;
@@ -55,7 +54,11 @@
             background-color: yellow;
         }
         &[data-color=red] {
-            background-color: red;
+            background-color: #ff4f37;
+
+            &.colors__item_active:before {
+                color: #ffffff;
+            }
         }
         &[data-color=blue] {
             background-color: blue;

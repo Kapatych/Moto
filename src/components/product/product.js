@@ -4,9 +4,8 @@ import ProductInfo from "./product-info";
 import ProductGallery from "./product-gallery";
 import ProductSpec from "./product-spec";
 
-const Product = ({product, onGoBack, onAddedToCart}) => {
+const Product = ({product, onGoBack, onAddedToCart, cartItems}) => {
     const {id, title, brand, price, colors, sizes, features, description, preferences, img: {gallery}} = product;
-
     return (
         <div className='product'>
             <div className='narrow-column'>
@@ -17,7 +16,7 @@ const Product = ({product, onGoBack, onAddedToCart}) => {
                              price={price}
                              thumb={gallery[0]}
                              onGoBack={onGoBack}
-                             onAddedToCart={onAddedToCart}/>
+                             onAddedToCart={onAddedToCart} cartItems={cartItems}/>
 
             </div>
             <div className='wide-column'>

@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import './index.css'
 
 import App from './components/app/App';
-import ErrorBoundry from "./components/error/error-boundry";
+import Error from "./components/error/error";
 import {applyMiddleware, compose, createStore} from "redux";
 import reducers from "./reducers";
 import thunk from "redux-thunk";
@@ -16,11 +16,11 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
     <Provider store={store}>
-        <ErrorBoundry>
+        <Error>
             <BrowserRouter>
                 <App/>
             </BrowserRouter>
-        </ErrorBoundry>
+        </Error>
     </Provider>
     , document.getElementById('root')
 );
