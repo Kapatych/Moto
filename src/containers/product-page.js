@@ -12,8 +12,8 @@ import Spinner from "../components/spinner"
 class ProductPage extends Component {
 
     componentDidMount() {
-        let idx = parseInt(this.props.match.params.productId) || 1;
-        this.props.fetchHelmetItem(idx);
+        let name = this.props.match.params.productName.split('-').join(' ');
+        this.props.fetchHelmetItem(name);
     }
     render() {
 

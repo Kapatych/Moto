@@ -23,7 +23,7 @@ function App() {
                     <Route exact path='/search' component={CatalogPage}/>
 
                     <Route exact path='/catalog/categories/' render={ () => <div>Categories</div> }/>
-                    <Route exact path='/catalog/:productId?' component={ProductPage}/>
+                    <Route exact path='/catalog/:productName?' component={ProductPage}/>
 
                     <Route path='/catalog/categories/:categoryName?' component={CatalogPage}/>
                     {/*<Route path='/catalog/brands/:brandId?' component={CatalogPage}/>*/}

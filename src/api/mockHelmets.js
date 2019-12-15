@@ -36,7 +36,7 @@ export default [
     },
     {
         id: 2,
-        title: 'Scorpion EXO-R420',
+        title: 'Scorpion EXO R420',
         price: 149.95,
         img: {
             thumb: '/uploads/scorpion_exo_r420_black.png',
@@ -110,7 +110,7 @@ export default [
     },
     {
         id: 4,
-        title: 'Scorpion EXO-AT950 Neocon',
+        title: 'Scorpion EXO AT950 Neocon',
         price: 199.99,
         img: {
             thumb: '/uploads/scorpion_exoat950_neocon_silver.png',
@@ -179,7 +179,7 @@ export default [
     },
     {
         id: 6,
-        title: 'LS2 Valiant - Black Chrome',
+        title: 'LS2 Valiant Black Chrome',
         price: 199.99,
         img: {
             thumb: '/uploads/ls2_valiant_helmet_black_chrome.png',
@@ -231,7 +231,7 @@ export default [
     },
     {
         id: 8,
-        title: 'Shoei VFX-EVO',
+        title: 'Shoei VFX EVO',
         price: 529,
         img: {
             thumb: '/uploads/shoei_vfxevo_black.png',

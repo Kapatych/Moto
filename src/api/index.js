@@ -20,6 +20,15 @@ export const fetchHelmetItem = async (id) => {
     })
 };
 
+export const fetchHelmetItemByName = async (name) => {
+    return new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            const item = mockHelmets.find( (item)=> item.title === name);
+            return resolve(item);
+        }, 400);
+
+    })
+};
 
 export const fetchCategories = async () => {
     return new Promise( (resolve, reject) => {

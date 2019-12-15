@@ -1,6 +1,6 @@
 import {
     fetchHelmets as fetchHelmetsAPI,
-    fetchHelmetItem as fetchHelmetItemAPI,
+    fetchHelmetItemByName as fetchHelmetItemAPI,
     fetchCategories as fetchCategoriesAPI
 } from '../api/';
 //TODO: optimize action-type import
@@ -93,10 +93,10 @@ export const changeSortType = (type) => {
 
 /*   Product-Page    */
 
-export const fetchHelmetItem = (id) => async (dispatch) => {
+export const fetchHelmetItem = (param) => async (dispatch) => {
     dispatch({type: FETCH_PRODUCT_REQUEST});
     try {
-        const data = await fetchHelmetItemAPI(id);
+        const data = await fetchHelmetItemAPI(param);
         dispatch({
             type: FETCH_PRODUCT_SUCCESS,
             payload: data
