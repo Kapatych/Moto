@@ -4,7 +4,7 @@ import {
     CHANGE_SORT_TYPE,
     SEARCH_PRODUCT,
     CLEAR_SEARCH,
-    DELETE_ALL_FILTERS
+    DELETE_ALL_FILTERS, SHOW_MORE
 } from "../action-types";
 
 
@@ -15,6 +15,7 @@ const initialState = {
     color: [],
     size: [],
     search: '',
+    currentPage: 1,
 };
 
 const updateFilter = (state, type, value) => {
@@ -39,7 +40,7 @@ const activeFilters = (state = initialState, {type, payload}) => {
         case ADD_PRODUCT_FILTER:
             return updateFilter(state, payload.type, payload.value);
         case DELETE_ALL_FILTERS:
-            return {...state, brand: [], color: [], size: []}
+            return {...state, brand: [], color: [], size: [], currentPage: 1}
         case ADD_ACTIVE_CATEGORY:
             return {
                 ...state,
@@ -59,6 +60,10 @@ const activeFilters = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 search: ''
+            };
+        case SHOW_MORE:
+            return {
+                ...state, currentPage: state.currentPage + 1
             };
         default:
             return state;

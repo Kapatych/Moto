@@ -10,7 +10,7 @@ import {
     fetchActiveCategory,
     changeSortType,
     clearSearch,
-    deleteAllFilters
+    deleteAllFilters, showMore
 } from "../actions";
 
 import {getFilteredHelmets, getFilters} from "../selectors";
@@ -56,6 +56,9 @@ class CatalogPage extends Component {
             filteredHelmets,
             activeFilters,
             changeSortType,
+            showMore,
+            location:{pathname},
+
         } = this.props;
 
         if (isLoading) {
@@ -70,13 +73,15 @@ class CatalogPage extends Component {
                      filters={filters}
                      addProductFilter={addProductFilter}
                      activeFilters={activeFilters}
-                     changeSortType={changeSortType}/>
+                     changeSortType={changeSortType}
+                     pathname={pathname}
+                     showMore={showMore}/>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    const {catalog: {categories, isLoading, isError}, activeFilters,} = state;
+    const {catalog: {categories, isLoading, isError}, activeFilters} = state;
 
     return {
         /* categories,*/
@@ -96,6 +101,7 @@ const mapDispatchToProps = {
     deleteAllFilters,
     changeSortType,
     clearSearch,
+    showMore
 };
 
 export default compose(

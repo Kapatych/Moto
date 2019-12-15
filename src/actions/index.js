@@ -12,7 +12,7 @@ import {
     ADD_ACTIVE_CATEGORY,
     CHANGE_SORT_TYPE,
     ADD_PRODUCT_TO_CART, DELETE_PRODUCT_FROM_CART, CHANGE_PRODUCT_QUANTITY, REMOVE_PRODUCT_FROM_CART,
-    SEARCH_PRODUCT, CLEAR_SEARCH, DELETE_ALL_FILTERS
+    SEARCH_PRODUCT, CLEAR_SEARCH, DELETE_ALL_FILTERS, SHOW_MORE
 
 
 } from '../action-types'
@@ -46,6 +46,12 @@ export const addProductFilter = (filter) => {
 export const deleteAllFilters = () => {
     return {
         type: DELETE_ALL_FILTERS,
+    }
+};
+
+export const showMore = () => {
+    return {
+        type: SHOW_MORE,
     }
 };
 
