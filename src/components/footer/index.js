@@ -18,7 +18,7 @@ import {Link} from "react-router-dom";
 const Index = () => {
     return (
         <footer className='footer'>
-            <div className='footer__top'>
+            {/*<div className='footer__top'>
                 <div className="footer__categories">
                     <div className="footer__title">categories</div>
                     <div className="footer__nav">
@@ -70,7 +70,7 @@ const Index = () => {
                         <Link to='/'><img src={paypal} alt=""/></Link>
                     </div>
                 </div>
-            </div>
+            </div>*/}
             <div className='footer__bottom'>
                 <div className="footer__logo">moto.</div>
                 <div className="footer_copyright">Copyright © 2017 MOTO. Shopify TPowered by Shopify.</div>

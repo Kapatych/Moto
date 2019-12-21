@@ -10,7 +10,7 @@ const CatalogFilter = ({filters, addProductFilter, activeFilters}) => {
     const {size, color, brand} = filters;
 
     return (
-        <div className='filter catalog__filter'>
+        <div className='catalog__filter filter'>
 
             <CatalogFilterSection type='brand' activeFilters={activeFilters} resetFilter={addProductFilter}>
                 <div className='brand'>

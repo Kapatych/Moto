@@ -26,10 +26,6 @@ const ProductInfo = ({id, sizes, colors, title, price, onGoBack, thumb, onAddedT
     return (
         <div className='product__info'>
 
-            <div className='link' onClick={onGoBack}>
-                <i className="fa fa-chevron-left" aria-hidden="true"/>
-                back to categories
-            </div>
             <div className='product__title'>{title}</div>
 
             <div className='product__price price'>${price}</div>
@@ -44,11 +40,6 @@ const ProductInfo = ({id, sizes, colors, title, price, onGoBack, thumb, onAddedT
                            addProduct={() => {
                                onAddedToCart(preparedProductForCart)
                            }}/>
-
-            <Link to='/' className='product__share'>
-                <i className="fa fa-share-alt" aria-hidden="true"/>
-                Share this
-            </Link>
 
         </div>
     )

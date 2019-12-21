@@ -2,8 +2,13 @@
     &__info {
         /*position: sticky;
         top: 0;*/
-        padding: 4.5rem 5rem 10rem 5rem;
         text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60vh;
     }
 
     .link {
@@ -21,13 +26,13 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 3px;
-        margin-top: 7rem;
+        /*margin-top: 7rem;*/
     }
 
     &__price {
         color: #ff4f37;
         letter-spacing: 1.6px;
-        margin-top: 3rem;
+        /*margin-top: 3.5rem;*/
     }
 
     &__caption {
@@ -36,12 +41,15 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1.4px;
-        margin-top: 3.5rem;
+        /*margin-top: 3.5rem;*/
     }
 
     .size {
         justify-content: center;
-        margin-top: 2rem;
+       /* margin-top: 2rem;*/
+    }
+    .colors {
+        margin: 0 -.75rem -1.5rem;
     }
 
 
@@ -49,7 +57,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 6rem;
+        /*margin-top: 6rem;*/
         color: #ff4f37;
         font-size: 1.2rem;
         font-weight: 700;

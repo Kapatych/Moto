@@ -1,11 +1,27 @@
 .catalog {
-    display: flex;
+    /*display: flex;
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-between;*/
+
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    height: 100%;
+
+    @media screen and (max-width: 1199.98px) {
+        grid-template-columns: 320px 1fr;
+    }
+    @media screen and (max-width: 991.98px) {
+        grid-template-columns: 260px 1fr;
+    }
+
+    &__content {
+
+    }
 
     &__top-block {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin: 0 0 4rem 0;
         padding: 0 0 2rem 0;
         align-items: center;
@@ -22,8 +38,8 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        grid-gap: 3rem;
     }
 
     &__button {

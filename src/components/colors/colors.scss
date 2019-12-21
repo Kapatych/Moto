@@ -2,8 +2,9 @@
 
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem -.75rem -1.5rem;
     flex-wrap: wrap;
+
 
     &__name {
         font-size: 1.2rem;
@@ -11,13 +12,14 @@
 
     &__item {
         cursor: pointer;
-        width: 4rem;
-        height: 4rem;
+        width: 4.3rem;
+        height: 4.3rem;
+        margin: 0 .75rem 1.5rem;
 
-        &:not(:last-child) {
+        /*&:not(:last-child) {
             margin-right: 1.5rem;
             margin-bottom: 1.5rem;
-        }
+        }*/
 
         &_active:before {
             font: normal normal normal 1.5rem FontAwesome;

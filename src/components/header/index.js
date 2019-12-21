@@ -16,17 +16,18 @@ const Header = ({quantity, searchProduct, deleteAllFilters, history}) => {
                 <Link to='/contact' className='menu__link'>Contacts</Link>
             </nav>
 
-            <div className='header__top'>
-                <div className='header__currency dropdown'>usd</div>
+            <Search searchProduct={searchProduct}
+                    history={history}
+                    deleteAllFilters={deleteAllFilters}/>
 
-                <Search searchProduct={searchProduct}
-                        history={history}
-                        deleteAllFilters={deleteAllFilters}/>
-
+            <div className='header__buttons'>
                 <Link to='/cart' className='header__cart'>{quantity}</Link>
-
                 <Link to='/auth' className='header__auth'/>
             </div>
+
+
+
+            {/* </div>*/}
 
 
         </header>

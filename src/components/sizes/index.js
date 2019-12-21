@@ -12,7 +12,7 @@ const Sizes = ({items, selected, onClickFunction}) => {
                 items.map((item, idx) => {
                     const className = classNames('size__item', {'size__item_active': selected.indexOf(item) !== -1});
                     return (
-                        <div key={idx} className={className}
+                        <div key={idx} className={className} data-size={item}
                              onClick={() => onClickFunction(item)}>
                             {item}
                         </div>

@@ -7,7 +7,7 @@ const ProductSpec = ({preferences, description, features}) => {
         <div className='product__specifications'>
             <Tabs>
                 <div label='overview'>
-                    <div className="product__preferences">
+                    {/*<div className="product__preferences">
                         {
                             preferences.map((item, idx) => {
                                 return (
@@ -19,28 +19,19 @@ const ProductSpec = ({preferences, description, features}) => {
                                 )
                             })
                         }
-                    </div>
+                    </div>*/}
                     <div className="product__description">
                         {description}
-                        <ul>
-                            {
-                                features.map( (item, idx) => {
-                                    return(
-                                        <li key={idx}>{item}</li>
-                                    )
-                                } )
-                            }
-                        </ul>
                     </div>
                 </div>
                 <div label='features'>
-                    <ul>
+                    <ul className="product__description">
                         {
-                            features.map( (item, idx) => {
-                                return(
+                            features.map((item, idx) => {
+                                return (
                                     <li key={idx}>{item}</li>
                                 )
-                            } )
+                            })
                         }
                     </ul>
                 </div>

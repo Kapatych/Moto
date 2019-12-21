@@ -13,7 +13,7 @@ export default [
             ],
         },
         colors: ['black'],
-        sizes: [ 'S', 'M', 'L', 'XL', 'XXL'],
+        sizes: [ 'xs', 's', 'm', 'xl', 'xxl'],
         brand: 'Icon',
         categories: ['1'],
         features: [
@@ -48,7 +48,7 @@ export default [
             ],
         },
         colors: ['black', 'matte-black', 'white', 'matte-titanium'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 's', 'l'],
         brand: 'Scorpion',
         categories: ['1'],
         features: [
@@ -79,7 +79,7 @@ export default [
             ],
         },
         colors: ['multicolor'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 'xs', 'm', 'l', 'xxl'],
         brand: 'AGV',
         categories: ['1'],
         features: [
@@ -121,7 +121,7 @@ export default [
             ],
         },
         colors: ['silver', 'orange', 'yellow'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 's', 'm', 'l', 'xl'],
         brand: 'Scorpion',
         categories: ['2', '3', '4'],
         features: [
@@ -161,7 +161,7 @@ export default [
             ],
         },
         colors: ['red', 'yellow', 'blue'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 'm', 'l', 'xxl'],
         brand: 'Schuberth',
         categories: ['2'],
         features: [
@@ -188,7 +188,7 @@ export default [
             ],
         },
         colors: ['chrome'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 'l', 'xl'],
         brand: 'LS2',
         categories: ['2'],
         features: [
@@ -217,7 +217,7 @@ export default [
             ],
         },
         colors: ['black', 'white'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 's', 'xl'],
         brand: 'Arai',
         categories: ['5'],
         features: [
@@ -242,7 +242,7 @@ export default [
             ],
         },
         colors: ['black', 'matte-black', 'white'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 's', 'm', 'l', 'xl'],
         brand: 'Shoei',
         categories: ['5'],
         features: [
@@ -269,7 +269,7 @@ export default [
             ],
         },
         colors: ['multicolor'],
-        sizes: [ 'S', 'M', 'L', 'XL'],
+        sizes: [ 'xs', 's', 'l',],
         brand: 'O\'Neal',
         categories: ['5'],
         features: [

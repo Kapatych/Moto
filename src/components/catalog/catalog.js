@@ -21,10 +21,10 @@ const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortT
 
     return (
         <div className='catalog'>
-            <div className='narrow-column'>
+            <div className='catalog__sidebar sidebar'>
                 <CatalogFilter filters={filters} activeFilters={activeFilters} addProductFilter={addProductFilter}/>
             </div>
-            <div className='wide-column '>
+            <div className='catalog__content content'>
                 <div className='catalog__top-block'>
                     <div className='catalog__title'>
                         {

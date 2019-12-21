@@ -13,7 +13,6 @@ const ProductGallery = ({gallery, brand}) => {
                 }
             </Slider>
             <div className='product__brand'>{brand}</div>
-            <div className='product__gallery-link link'>Specifications</div>
         </div>
     )
 };

@@ -8,14 +8,15 @@
         border: none;
         background: none;
         cursor: pointer;
-        height: 100%;
+        align-self: stretch;
     }
     &__content {
         flex-grow: 1;
         text-align: center;
     }
     &__content img {
-        max-width: 60rem;
+        width: 80%;
+        max-width: 53rem;
     }
     &__dots {
         display: flex;
@@ -28,7 +29,7 @@
         border-radius: 1rem;
         background-color: #404040;
         padding: .5rem;
-        margin: 1rem;
+        margin: .5rem 1rem;
         cursor: pointer;
         &_active {
             background-color: #ff4f37;
