@@ -3,12 +3,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex: 0 0 auto;
-  min-height: 10rem;
+  flex: 0 0 10rem;
   padding: 0 5rem;
 
   @media screen and (max-width: 1199.98px) {
     padding: 2rem 5rem;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    flex: 0 0 5rem;
+    padding: 1rem;
+    flex-wrap: nowrap;
   }
 
   &__logo {
@@ -18,6 +23,10 @@
     text-transform: uppercase;
     letter-spacing: 4.8px;
     text-decoration: none;
+
+    @media screen and (max-width: 767.98px) {
+      font-size: 3.5rem;
+    }
   }
 
   &__menu {
@@ -30,22 +39,16 @@
     align-items: center;
   }
 
-  &__currency {
-    color: #404040;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    /*padding: 0 2rem;*/
-    cursor: pointer;
+  &__buttons {
+    display: flex;
+    padding: 0 0 0 3rem;
 
-    &:hover {
-      color: #ff4f37;
+    @media screen and (max-width: 767.98px) {
+      padding: 0;
     }
-
   }
 
   &__cart {
-    padding: 0 3rem 0 0;
     color: #404040;
 
     &:hover {
@@ -60,6 +63,7 @@
   }
 
   &__auth {
+    padding: 0 0 0 3rem;
     color: #404040;
 
     &:hover {
@@ -72,6 +76,25 @@
       font: normal normal normal 2rem FontAwesome;
     }
   }
+
+  &__burger {
+    display: none;
+    padding: 0 0 0 3rem;
+    color: #404040;
+    cursor: pointer;
+    order: 1;
+
+    &:after {
+      content: "\f0c9";
+      display: inline-block;
+      font: normal normal normal 2rem FontAwesome;
+    }
+
+    @media screen and (max-width: 767.98px) {
+      display: block;
+    }
+
+  }
 }
 
 .menu {
@@ -81,6 +104,24 @@
 
   @media screen and (max-width: 991.98px) {
     margin: 0 -2rem 0 0;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+
+    &.mobile {
+      display: flex;
+    }
   }
 
   &__link {
@@ -97,12 +138,40 @@
       color: #ff4f37;
     }
 
-    &:not(:last-child) {
+    /*&:not(:last-child) {
       border-right: 1px solid #dddddd;
+    }*/
+
+    @media screen and (max-width: 767.98px) {
+      font-size: 2rem;
+      padding: 2rem 2rem;
+
+      /*&:not(:last-child) {
+        border-right: none;
+      }*/
     }
 
-
   }
+
+  &__close {
+    display: none;
+
+    @media screen and (max-width: 767.98px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      padding: 2rem 3rem 0 0;
+
+      &:after {
+        content: "\f00d";
+        display: inline-block;
+        font: normal normal normal 2rem FontAwesome;
+      }
+    }
+  }
+
 }
 
 .dropdown {

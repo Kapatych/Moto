@@ -2,7 +2,7 @@
 
   display: flex;
   border: 1px solid #dddddd;
-  margin: 0 3rem;
+  margin: 0 0 0 3rem;
   justify-content: space-between;
 
   @media screen and (max-width: 1199.98px) {
@@ -15,6 +15,16 @@
     order: 0;
     width: 85%;
     margin: 1rem 0 0;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    flex-grow: 1;
+    width: auto;
+    margin: 0 2rem;
+  }
+
+  @media screen and (max-width: 479.98px) {
+    display: none;
   }
 
   &__text {
@@ -31,6 +41,10 @@
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 1.2px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+      /*height: 3rem;*/
     }
   }
 
