@@ -12,8 +12,12 @@
 
   @media screen and (max-width: 767.98px) {
     flex: 0 0 5rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 479.98px) {
+    padding: 1rem;
   }
 
   &__logo {
