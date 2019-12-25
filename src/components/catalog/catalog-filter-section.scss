@@ -1,20 +1,27 @@
 .filter__section {
-    &:not(:last-child) {
-        margin-bottom: 5rem;
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+    margin: 0 0 2rem 0;
+
+    @media screen and (max-width: 767.98px) {
+      align-items: baseline;
     }
-    &-header {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #dddddd;
-        margin: 0 0 2rem 0;
-    }
-    &-title {
-        padding: 0 0 2rem 0;
-    }
-    &-reset{
-        text-align: center;
-        padding: 1rem 0;
-    }
+  }
+
+  &-title {
+    padding: 0 0 2rem 0;
+  }
+
+  &-reset {
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 
 

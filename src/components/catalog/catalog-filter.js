@@ -5,7 +5,7 @@ import Sizes from "../sizes";
 import Colors from "../colors";
 import CatalogFilterSection from "./catalog-filter-section";
 
-const CatalogFilter = ({filters, addProductFilter, activeFilters}) => {
+const CatalogFilter = ({filters, addProductFilter, activeFilters, setMobileSidebar}) => {
 
     const {size, color, brand} = filters;
 
@@ -41,6 +41,7 @@ const CatalogFilter = ({filters, addProductFilter, activeFilters}) => {
                        onClickFunction={(value) => addProductFilter({type: 'size', value: value})}/>
             </CatalogFilterSection>
 
+            <button className='button filter__button' onClick={()=> setMobileSidebar('')}>Filter</button>
 
         </div>
     )

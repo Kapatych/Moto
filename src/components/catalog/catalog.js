@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './catalog.scss';
+import classNames from "classnames";
 import CatalogItem from "./catalog-item";
 import CatalogFilter from "./catalog-filter";
 import CatalogSort from "./catalog-sort";
 
 
-const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortType, pathname, showMore}) => {
+const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortType, showMore}) => {
 
-    const itemsPerPage = 4;
+    const itemsPerPage = 8;
     const allPages = Math.ceil(helmets.length / itemsPerPage);
     const currentPage = activeFilters.currentPage;
 
@@ -19,10 +20,14 @@ const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortT
         }
     };
 
+    const [mobileSidebar, setMobileSidebar] = useState('');
+    const className = classNames(`catalog__sidebar sidebar ${mobileSidebar}`);
+
     return (
         <div className='catalog'>
-            <div className='catalog__sidebar sidebar'>
-                <CatalogFilter filters={filters} activeFilters={activeFilters} addProductFilter={addProductFilter}/>
+            <div className={className}>
+                <CatalogFilter filters={filters} activeFilters={activeFilters} addProductFilter={addProductFilter} setMobileSidebar={setMobileSidebar}/>
+                <div className='menu__close' onClick={() => setMobileSidebar('')}/>
             </div>
             <div className='catalog__content content'>
                 <div className='catalog__top-block'>
@@ -33,7 +38,9 @@ const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortT
                             'all helmets'
                         }
                     </div>
-                    <CatalogSort activeFilters={activeFilters} changeSortType={changeSortType}/>
+                    <CatalogSort activeFilters={activeFilters}
+                                 changeSortType={changeSortType}
+                                 setMobileSidebar={setMobileSidebar}/>
                 </div>
                 <div className='catalog__list'>
                     {renderCatalogList(helmets)}

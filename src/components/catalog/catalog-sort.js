@@ -1,7 +1,7 @@
 import React from 'react';
 import './catalog-sort.scss';
 
-const CatalogSort = ({activeFilters, changeSortType}) => {
+const CatalogSort = ({activeFilters, changeSortType, setMobileSidebar}) => {
     return (
         <div className='catalog__sort sort'>
             <span className='sort__title'>sort by</span>
@@ -13,6 +13,7 @@ const CatalogSort = ({activeFilters, changeSortType}) => {
                 <option value="titleASC">name, a-z</option>
                 <option value="titleDESC">name, z-a</option>
             </select>
+            <button className='sort__button button' onClick={()=> setMobileSidebar('sidebar_mobile')}>Filters</button>
         </div>
     )
 };
