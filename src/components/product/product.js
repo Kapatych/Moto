@@ -27,7 +27,7 @@ const Product = ({product, onGoBack, onAddedToCart, cartItems}) => {
                              onGoBack={onGoBack}
                              onAddedToCart={onAddedToCart} cartItems={cartItems}/>
 
-                <Link to='/' className='product__share'>
+                <Link to='/' className='product__share link'>
                     <i className="fa fa-share-alt" aria-hidden="true"/>
                     Share this
                 </Link>

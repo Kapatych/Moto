@@ -3,12 +3,13 @@
         height: calc(100% - 2rem);
         display: flex;
         justify-content: center;
-        /*margin: 0 auto;
-        padding: 8rem 0 0 0;
-        */
 
         .tabs__labels{
             padding-top: 5rem;
+
+            @media screen and (max-width: 479.98px) {
+                padding-top: 1rem;
+            }
         }
         .tabs__content {
             height: calc(100% - 11rem);
