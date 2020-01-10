@@ -1,7 +1,4 @@
 .app {
-    /*height: 100%;
-    display: grid;
-    grid-template-rows: 100px 1fr 150px;*/
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -62,6 +59,7 @@
 }
 
 .button {
+    display: inline-block;
     box-shadow: 2px 14px 16px rgba(0, 0, 0, .15);
     background-color: #ff4f37;
     color: #ffffff;

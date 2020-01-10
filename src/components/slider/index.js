@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './slider.scss';
 
-const Index = ({children}) => {
-    const [active , setActive] = React.useState(0);
+const Slider = ({children, isDynamic, delay}) => {
+    const [active , setActive] = useState(0);
+    let timerId = null;
+
+    useEffect(() => {
+        if (isDynamic) {
+            timerId = setTimeout(() => {
+                let currentImageIndex = active;
+                currentImageIndex = (currentImageIndex === children.length - 1) ? 0 : currentImageIndex + 1;
+                setActive(currentImageIndex);
+            }, delay)
+        }
+    });
 
     //If product contains only one image
-    if(children.length === 1){
+    if (children.length === 1) {
         return <img src={children[0].props.src} className='single-image' alt=""/>
+    }
+
+    if (children.length === undefined && typeof (children) === 'object') {
+        return children;
     }
 
     const turnImage = (e) => {
@@ -16,6 +31,7 @@ const Index = ({children}) => {
         } else {
             currentImageIndex = (currentImageIndex === 0) ? children.length - 1 : currentImageIndex - 1;
         }
+        clearTimeout(timerId);
         return setActive(currentImageIndex);
     };
 
@@ -52,4 +68,4 @@ const Index = ({children}) => {
     )
 };
 
-export default Index;
+export default Slider;
