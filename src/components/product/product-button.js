@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 import './product-button.scss';
 
 const ProductButton = ({itemIndex, addProduct}) => {
@@ -9,6 +10,11 @@ const ProductButton = ({itemIndex, addProduct}) => {
     return (
         <button type="button" className='product__button button' onClick={addProduct}>Add to Cart</button>
     )
+};
+
+ProductButton.propTypes = {
+    itemIndex: PropTypes.number,
+    addProduct: PropTypes.func,
 };
 
 export default ProductButton;

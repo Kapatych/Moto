@@ -1,6 +1,7 @@
 import React from 'react';
 import './search.scss';
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 
 const Search = ({searchProduct, deleteAllFilters, history, mobileSearch, setMobileSearch}) => {
 
@@ -30,6 +31,14 @@ const Search = ({searchProduct, deleteAllFilters, history, mobileSearch, setMobi
             <button type='submit' className='search__button'/>
         </form>
     )
+};
+
+Search.propTypes = {
+    searchProduct: PropTypes.func,
+    deleteAllFilters: PropTypes.func,
+    history: PropTypes.object,
+    mobileSearch: PropTypes.string,
+    setMobileSearch: PropTypes.func,
 };
 
 export default Search;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './sizes.scss';
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 
 const Sizes = ({items, selected, onClickFunction}) => {
 
@@ -21,6 +22,12 @@ const Sizes = ({items, selected, onClickFunction}) => {
             }
         </div>
     )
+};
+
+Sizes.propTypes = {
+    items: PropTypes.array,
+    selected: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    onClickFunction: PropTypes.func,
 };
 
 export default Sizes;

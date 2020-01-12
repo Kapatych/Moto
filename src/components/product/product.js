@@ -1,9 +1,12 @@
 import React from 'react';
 import './product.scss';
+import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
+
 import ProductInfo from "./product-info";
 import ProductGallery from "./product-gallery";
 import ProductSpec from "./product-spec";
-import {Link} from "react-router-dom";
+
 
 const Product = ({product, onGoBack, onAddedToCart, cartItems}) => {
 
@@ -45,6 +48,14 @@ const Product = ({product, onGoBack, onAddedToCart, cartItems}) => {
             </div>
         </div>
     )
+};
+
+Product.propTypes = {
+    product: PropTypes.object,
+    onGoBack: PropTypes.func,
+    onAddedToCart: PropTypes.func,
+    cartItems: PropTypes.array,
+    activeBlock: PropTypes.string,
 };
 
 export default Product;

@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './tabs.scss';
 
 const Tabs = ({children}) => {
-    const [ active, setActive ] = React.useState(0);
+    const [active, setActive] = React.useState(0);
 
     const openTab = (e) => setActive(+e.target.dataset.index);
 
-    return(
+    return (
         <div className='tabs'>
             <div className="tabs__labels">
-               {children.map((child,index) => (
+                {children.map((child, index) => (
                     <button
                         key={index}
                         className={`tabs__link ${index === active ? 'tabs__link_active' : ''}`}
@@ -23,6 +24,10 @@ const Tabs = ({children}) => {
             </div>
         </div>
     )
+};
+
+Tabs.propTypes = {
+    children: PropTypes.array
 };
 
 export default Tabs;

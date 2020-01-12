@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './catalog-sort.scss';
 
 const CatalogSort = ({activeFilters, changeSortType, setMobileSidebar}) => {
@@ -13,9 +14,15 @@ const CatalogSort = ({activeFilters, changeSortType, setMobileSidebar}) => {
                 <option value="titleASC">name, a-z</option>
                 <option value="titleDESC">name, z-a</option>
             </select>
-            <button className='sort__button button' onClick={()=> setMobileSidebar('sidebar_mobile')}>Filters</button>
+            <button className='sort__button button' onClick={() => setMobileSidebar('sidebar_mobile')}>Filters</button>
         </div>
     )
+};
+
+CatalogSort.propTypes = {
+    activeFilters: PropTypes.object,
+    changeSortType: PropTypes.func,
+    setMobileSidebar: PropTypes.func,
 };
 
 export default CatalogSort;

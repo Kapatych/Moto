@@ -1,5 +1,6 @@
 import React from 'react';
 import './product-gallery.scss';
+import PropTypes from 'prop-types';
 import Slider from "../slider";
 
 const ProductGallery = ({gallery, brand}) => {
@@ -15,6 +16,11 @@ const ProductGallery = ({gallery, brand}) => {
             <div className='product__brand'>{brand}</div>
         </div>
     )
+};
+
+ProductGallery.propTypes = {
+    gallery: PropTypes.array,
+    brand: PropTypes.string,
 };
 
 export default ProductGallery;

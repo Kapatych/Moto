@@ -1,25 +1,13 @@
 import React from 'react';
 import './product-spec.scss';
+import PropTypes from 'prop-types';
 import Tabs from "../tabs";
 
-const ProductSpec = ({preferences, description, features}) => {
+const ProductSpec = ({description, features}) => {
     return (
         <div className='product__specifications'>
             <Tabs>
                 <div label='overview'>
-                    {/*<div className="product__preferences">
-                        {
-                            preferences.map((item, idx) => {
-                                return (
-                                    <div key={idx} className='product__preference-item'>
-                                        <img src={item.icon} alt=""/>
-                                        <div>{item.name}</div>
-
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>*/}
                     <div className="product__description">
                         {description}
                     </div>
@@ -38,6 +26,11 @@ const ProductSpec = ({preferences, description, features}) => {
             </Tabs>
         </div>
     )
+};
+
+ProductSpec.propTypes = {
+    description: PropTypes.string,
+    features: PropTypes.array,
 };
 
 export default ProductSpec;

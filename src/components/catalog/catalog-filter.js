@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import './catalog-filter.scss';
 import Sizes from "../sizes";
 import Colors from "../colors";
@@ -41,10 +42,17 @@ const CatalogFilter = ({filters, addProductFilter, activeFilters, setMobileSideb
                        onClickFunction={(value) => addProductFilter({type: 'size', value: value})}/>
             </CatalogFilterSection>
 
-            <button className='button filter__button' onClick={()=> setMobileSidebar('')}>Filter</button>
+            <button className='button filter__button' onClick={() => setMobileSidebar('')}>Filter</button>
 
         </div>
     )
+};
+
+CatalogFilter.propTypes = {
+    filters: PropTypes.object,
+    activeFilters: PropTypes.object,
+    addProductFilter: PropTypes.func,
+    setMobileSidebar: PropTypes.func,
 };
 
 export default CatalogFilter;

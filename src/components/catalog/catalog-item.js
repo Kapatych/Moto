@@ -1,9 +1,10 @@
 import React from 'react';
 import './catalog-item.scss';
 import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const CatalogItem = ({helmet}) => {
-    const {id, title, price, img: {thumb}} = helmet;
+    const {title, price, img: {thumb}} = helmet;
 
     const urlPath = title.split(' ').join('-');
 
@@ -24,9 +25,11 @@ const CatalogItem = ({helmet}) => {
             </div>
             <Link to={`/catalog/${urlPath}`} className='catalog__item-button button'>Buy now</Link>
         </div>
-
     )
+};
 
+CatalogItem.propTypes = {
+    helmet: PropTypes.object,
 };
 
 export default CatalogItem;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './catalog-filter-section.scss';
 
 const CatalogFilterSection = ({children, type, activeFilters, resetFilter}) => {
@@ -14,6 +15,13 @@ const CatalogFilterSection = ({children, type, activeFilters, resetFilter}) => {
             {children}
         </div>
     )
+};
+
+CatalogFilterSection.propTypes = {
+    children: PropTypes.object,
+    type: PropTypes.string,
+    activeFilters: PropTypes.object,
+    resetFilter: PropTypes.func
 };
 
 export default CatalogFilterSection;

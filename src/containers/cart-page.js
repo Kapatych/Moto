@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 import {addProductToCart, deleteProductFromCart, removeProductFromCart} from "../actions";
+
 import empty_cart from '../assets/images/empty_cart.svg'
 import Cart from "../components/cart/cart";
-import {Link} from "react-router-dom";
+
 
 class CartPage extends Component {
     render() {
-        const {cartItems, orderTotal, addProductToCart, removeProductFromCart, deleteProductFromCart} = this.props;
+        const {
+            cartItems,
+            orderTotal,
+            addProductToCart,
+            removeProductFromCart,
+            deleteProductFromCart
+        } = this.props;
 
         if (cartItems.length === 0) return (
             <div className='cart cart_empty'>
@@ -24,7 +33,15 @@ class CartPage extends Component {
                      deleteProductFromCart={deleteProductFromCart}/>
     }
 }
-const mapStateToProps = ({cart:{cartItems, orderTotal}}) => {
+
+CartPage.propTypes = {
+    cartItems: PropTypes.array,
+    orderTotal: PropTypes.number,
+    addProductToCart: PropTypes.func,
+    removeProductFromCart: PropTypes.func,
+    deleteProductFromCart: PropTypes.func,
+};
+const mapStateToProps = ({cart: {cartItems, orderTotal}}) => {
     return {
         cartItems,
         orderTotal

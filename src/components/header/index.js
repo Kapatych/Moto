@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.scss';
 import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 import Search from "../search/search";
 import Nav from "./nav";
 
@@ -36,6 +37,13 @@ const Header = ({quantity, searchProduct, deleteAllFilters, history}) => {
             </div>
         </header>
     )
+};
+
+Header.propTypes = {
+    quantity: PropTypes.number,
+    searchProduct: PropTypes.func,
+    deleteAllFilters: PropTypes.func,
+    history: PropTypes.object,
 };
 
 export default Header;

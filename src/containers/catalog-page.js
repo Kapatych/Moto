@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
+import PropTypes from 'prop-types';
 
 import {
     addProductFilter,
@@ -58,7 +59,6 @@ class CatalogPage extends Component {
             changeSortType,
             showMore,
             location:{pathname},
-
         } = this.props;
 
         if (isLoading) {
@@ -80,11 +80,22 @@ class CatalogPage extends Component {
     }
 }
 
+CatalogPage.propTypes = {
+    isLoading: PropTypes.bool,
+    isError: PropTypes.bool,
+    filters: PropTypes.object,
+    addProductFilter: PropTypes.func,
+    filteredHelmets: PropTypes.array,
+    activeFilters: PropTypes.object,
+    changeSortType: PropTypes.func,
+    showMore: PropTypes.func,
+    pathname: PropTypes.string,
+};
+
 const mapStateToProps = (state) => {
-    const {catalog: {categories, isLoading, isError}, activeFilters} = state;
+    const {catalog: {isLoading, isError}, activeFilters} = state;
 
     return {
-        /* categories,*/
         isLoading,
         isError,
         activeFilters,

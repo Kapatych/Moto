@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {compose} from "redux";
 import {connect} from "react-redux";
 import {withRouter} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import {addProductToCart, fetchHelmetItem} from "../actions";
 
@@ -15,6 +16,7 @@ class ProductPage extends Component {
         let name = this.props.match.params.productName.split('-').join(' ');
         this.props.fetchHelmetItem(name);
     }
+
     render() {
 
         const {
@@ -23,19 +25,28 @@ class ProductPage extends Component {
             isError,
             addProductToCart,
             cartItems,
-            history:{goBack}} = this.props;
-        if (isError) {
-            return <ErrorIndicator />
-        }
-        if (isLoading) {
-            return <Spinner/>
-        }
+            history: {goBack}
+        } = this.props;
+
+        if (isError) return <ErrorIndicator/>;
+
+        if (isLoading) return <Spinner/>;
+
         return <Product product={product} onGoBack={goBack} onAddedToCart={addProductToCart} cartItems={cartItems}/>
 
     }
 }
 
-const mapStateToProps = ({product: {product, isLoading, isError}, cart:{cartItems}}) => {
+ProductPage.propTypes = {
+    product: PropTypes.object,
+    isLoading: PropTypes.bool,
+    isError: PropTypes.bool,
+    addProductToCart: PropTypes.func,
+    cartItems: PropTypes.array,
+    goBack: PropTypes.func
+};
+
+const mapStateToProps = ({product: {product, isLoading, isError}, cart: {cartItems}}) => {
     return {
         product,
         isLoading,
@@ -52,4 +63,4 @@ const mapDispatchToProps = {
 export default compose(
     withRouter,
     connect(mapStateToProps, mapDispatchToProps)
-)(ProductPage) ;
+)(ProductPage);

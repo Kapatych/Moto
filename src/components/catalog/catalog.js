@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import './catalog.scss';
 import classNames from "classnames";
 import CatalogItem from "./catalog-item";
@@ -54,6 +55,14 @@ const Catalog = ({helmets, filters, addProductFilter, activeFilters, changeSortT
     )
 };
 
+Catalog.propTypes = {
+    helmets: PropTypes.array,
+    filters: PropTypes.object,
+    activeFilters: PropTypes.object,
+    addProductFilter: PropTypes.func,
+    changeSortType: PropTypes.func,
+    showMore: PropTypes.func,
+};
 
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import './product-info.scss';
+import PropTypes from 'prop-types';
 import Colors from "../colors";
 import Sizes from "../sizes";
 import ProductButton from "./product-button";
 
-const ProductInfo = ({id, sizes, colors, title, price, onGoBack, thumb, onAddedToCart, cartItems}) => {
+const ProductInfo = ({id, sizes, colors, title, price, thumb, onAddedToCart, cartItems}) => {
 
     const [selectedSize, setSelectedSize] = React.useState(sizes[0]);
     const [selectedColor, setSelectedColor] = React.useState(colors[0]);
@@ -43,6 +43,17 @@ const ProductInfo = ({id, sizes, colors, title, price, onGoBack, thumb, onAddedT
 
         </div>
     )
+};
+
+ProductInfo.propTypes = {
+    id: PropTypes.number,
+    sizes: PropTypes.array,
+    colors: PropTypes.array,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    thumb:PropTypes.string,
+    onAddedToCart: PropTypes.func,
+    cartItems: PropTypes.array,
 };
 
 export default ProductInfo;

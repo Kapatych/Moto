@@ -1,13 +1,16 @@
 import React from 'react';
 import './nav.scss';
 import {Link} from "react-router-dom";
+import classNames from "classnames";
+import PropTypes from 'prop-types';
+
 import full_face from "../../assets/images/full_face_helmets.png";
 import modular from "../../assets/images/modular_helmets.png";
 import dual_sport from "../../assets/images/dual_sport_helmets.png";
 import dirt from "../../assets/images/dirt_helmets.png";
-import classNames from "classnames";
 
-const Nav = ({mobileMenu, setMobileMenu,}) => {
+
+const Nav = ({mobileMenu, setMobileMenu}) => {
 
     const className = classNames('header__menu menu', mobileMenu);
 
@@ -53,6 +56,11 @@ const Nav = ({mobileMenu, setMobileMenu,}) => {
             <div className='menu__close' onClick={() => setMobileMenu('')}/>
         </nav>
     )
+};
+
+Nav.propTypes = {
+    mobileMenu: PropTypes.string,
+    setMobileMenu: PropTypes.func,
 };
 
 export default Nav;

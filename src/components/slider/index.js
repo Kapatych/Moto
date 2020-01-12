@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+import PropTypes from 'prop-types';
 import './slider.scss';
 
 const Slider = ({children, isDynamic, delay}) => {
-    const [active , setActive] = useState(0);
-    let timerId = null;
+    const [active, setActive] = useState(0);
+
+    let timerId = useRef(null);
 
     useEffect(() => {
         if (isDynamic) {
-            timerId = setTimeout(() => {
+            timerId.current = setTimeout(() => {
                 let currentImageIndex = active;
                 currentImageIndex = (currentImageIndex === children.length - 1) ? 0 : currentImageIndex + 1;
                 setActive(currentImageIndex);
-            }, delay)
+            }, delay);
+
+            return () => {
+                clearTimeout(timerId.current)
+            }
         }
     });
 
@@ -31,7 +37,7 @@ const Slider = ({children, isDynamic, delay}) => {
         } else {
             currentImageIndex = (currentImageIndex === 0) ? children.length - 1 : currentImageIndex - 1;
         }
-        clearTimeout(timerId);
+        clearTimeout(timerId.current);
         return setActive(currentImageIndex);
     };
 
@@ -54,18 +60,24 @@ const Slider = ({children, isDynamic, delay}) => {
             </div>
             <div className='slider__dots'>
                 {
-                    children.map( (child, idx) => {
+                    children.map((child, idx) => {
                         return (
                             <button onClick={showImage}
                                     key={idx}
                                     className={`slider__dots-item${(idx === active) ? ' slider__dots-item_active' : ''}`}
-                                    data-index={idx} />
+                                    data-index={idx}/>
                         )
                     })
                 }
             </div>
         </div>
     )
+};
+
+Slider.propTypes = {
+    children: PropTypes.array,
+    isDynamic: PropTypes.bool,
+    delay: PropTypes.number,
 };
 
 export default Slider;
