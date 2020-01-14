@@ -4,11 +4,12 @@ import {Link} from "react-router-dom";
 import classNames from "classnames";
 import PropTypes from 'prop-types';
 
-import full_face from "../../assets/images/full_face_helmets.png";
-import modular from "../../assets/images/modular_helmets.png";
-import dual_sport from "../../assets/images/dual_sport_helmets.png";
-import dirt from "../../assets/images/dirt_helmets.png";
-
+import full_face from "../../assets/images/full_face_helmet_min.png";
+import modular from "../../assets/images/modular_helmet_min.png";
+import dual_sport from "../../assets/images/dual_sport_helmet_min.png";
+import dirt from "../../assets/images/dirt_helmet_min.png";
+import open_face from '../../assets/images/open_face_helmet_min.png';
+import half from '../../assets/images/half_helmet_min.png';
 
 const Nav = ({mobileMenu, setMobileMenu}) => {
 
@@ -37,18 +38,14 @@ const Nav = ({mobileMenu, setMobileMenu}) => {
                         <img src={dirt} alt="dirt" className='menu__link-img'/>
                         Dirt Helmets
                     </Link>
-                    {/*<Link to='/catalog/categories/snowmobile-helmets' className='menu__link'>
-                                <img src={snow} alt="snowmobile" className='menu__link-img'/>
-                                Snowmobile Helmets
-                            </Link>*/}
-                    {/*<Link to='/catalog/categories/open-face-helmets' className='menu__link'>
+                    <Link to='/catalog/categories/open-face-helmets' className='menu__link'>
                                 <img src={open_face} alt="open_face" className='menu__link-img'/>
                                 Open Face Helmets
                             </Link>
                             <Link to='/catalog/categories/half-helmets' className='menu__link'>
                                 <img src={half} alt="half" className='menu__link-img'/>
                                 Half Helmets
-                            </Link>*/}
+                            </Link>
                 </div>
             </div>
             <Link to='/contact' className='menu__link'>Contacts</Link>

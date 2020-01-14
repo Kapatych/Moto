@@ -70,4 +70,33 @@
 
 
   }
+
+}
+
+.categories {
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 3rem;
+  }
+
+  &__item {
+    background: #f4f4f4;
+    text-align: center;
+    min-height: 15rem;
+    padding: 1.5rem;
+    text-decoration: none;
+
+    &-title {
+      text-decoration: none;
+      display: block;
+      padding: 3rem 0;
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 25rem;
+    }
+  }
 }
