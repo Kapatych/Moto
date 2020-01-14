@@ -5,16 +5,21 @@ import PropTypes from 'prop-types';
 import Counter from "../counter";
 
 const CartItem = ({item, addProductToCart, removeProductFromCart, deleteProduct}) => {
-    const {id, thumb, title, size, color, price, quantity, total} = item;
+    const {thumb, title, size, color, price, quantity, total} = item;
+
+    const urlPath = title.split(' ').join('-');
+
     return (
         <div className='cart__item'>
 
             <div className='cart__item-img'>
-                <img src={thumb} alt="" className='cart__item-thumb'/>
+                <Link to={`catalog/${urlPath}`}>
+                    <img src={thumb} alt="" className='cart__item-thumb'/>
+                </Link>
             </div>
 
             <div className='cart__item-info'>
-                <Link to={`catalog/${id}`} className='cart__item-title'>{title}</Link>
+                <Link to={`catalog/${urlPath}`} className='cart__item-title'>{title}</Link>
                 <div>Size: {size} </div>
                 <div> Color: {color}</div>
                 <div className='cart__item-price'>Price: ${price}</div>
