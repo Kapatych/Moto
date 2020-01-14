@@ -1,39 +1,40 @@
 .size {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -.75rem;
+
+  &__item {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -.75rem;
+    justify-content: center;
+    align-items: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    color: #404040;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    cursor: pointer;
+    margin: 0 .75rem 1.5rem;
+    border: 1px solid #dddddd;
 
-    &__item{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 4.3rem;
-        height: 4.3rem;
-        color: #404040;
-        font-size: 1.4rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1.4px;
-        cursor: pointer;
-        margin: 0 .75rem 1.5rem;
-        border: 1px solid #dddddd;
-
-        &:hover {
-            color: #ff4f37;
-            border: 1px solid #ff4f37;
-        }
-
-        &_active{
-            background-color: #ff553a;
-            color: #ffffff;
-            &:hover {
-                color: #ffffff;
-            }
-        }
-
-        &[data-size=xs] {
-            order: -1;
-        }
+    &:hover {
+      color: #ff4f37;
+      border: 1px solid #ff4f37;
     }
+
+    &_active {
+      background-color: #ff553a;
+      color: #ffffff;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    &[data-size=xs] {
+      order: -1;
+    }
+  }
 
 }

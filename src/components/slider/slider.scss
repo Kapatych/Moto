@@ -1,57 +1,64 @@
 .slider {
 
-    &__main {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-    }
-    &__button {
-        border: none;
-        background: none;
-        cursor: pointer;
-        align-self: stretch;
-    }
-    &__content {
-        flex-grow: 1;
-        text-align: center;
-    }
-    &__content img {
-        width: 80%;
-        max-width: 53rem;
-    }
-    &__dots {
-        display: flex;
-        justify-content: center;
-    }
-    &__dots-item {
-        border: none;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 1rem;
-        background-color: #404040;
-        padding: .5rem;
-        margin: .5rem 1rem;
-        cursor: pointer;
-        &_active {
-            background-color: #ff4f37;
-        }
-    }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
 
-    &__prev:before {
-        font: normal normal normal 3rem FontAwesome;
-        content: "\f053";
-        display: inline-block;
-    }
-    &__next:before {
-        font: normal normal normal 3rem FontAwesome;
-        content: "\f054";
-        display: inline-block;
-    }
+  &__button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-self: stretch;
+  }
 
-    &__prev:hover, &__next:hover {
-        &:before {
-            color: #ff4f37;
-        }
+  &__content {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__content img {
+    width: 80%;
+    max-width: 53rem;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dots-item {
+    border: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background-color: #404040;
+    padding: .5rem;
+    margin: .5rem 1rem;
+    cursor: pointer;
+
+    &_active {
+      background-color: #ff4f37;
     }
+  }
+
+  &__prev:before {
+    font: normal normal normal 3rem FontAwesome;
+    content: "\f053";
+    display: inline-block;
+  }
+
+  &__next:before {
+    font: normal normal normal 3rem FontAwesome;
+    content: "\f054";
+    display: inline-block;
+  }
+
+  &__prev:hover, &__next:hover {
+    &:before {
+      color: #ff4f37;
+    }
+  }
 
 }

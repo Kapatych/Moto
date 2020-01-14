@@ -25,25 +25,12 @@
         cursor: pointer;
         padding: 1.5rem 0;
 
-        &:before {
-            /*font: normal normal normal 1.5rem FontAwesome;
-            font-weight: 700;
-            !*color: #ff4f37;*!
-            margin-right: 1.5rem;
-            content: "\f096";
-            display: inline-block;*/
-        }
-
         &_active {
             &:before {
                 font: normal normal normal 1.5rem FontAwesome;
                 font-weight: 700;
                 color: #ff4f37;
                 margin-right: 1.5rem;
-                /*content: "\f046";*/
-                /*content: "\f0fe";*/
-                /*content: "\f196";*/
-                /*content: "\f0c8";*/
                 content: "\f00c";
                 display: inline-block;
             }
