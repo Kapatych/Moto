@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import {Provider} from 'react-redux';
 import './index.css'
 
@@ -17,9 +17,9 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 ReactDOM.render(
     <Provider store={store}>
         <Error>
-            <BrowserRouter>
+            <HashRouter>
                 <App/>
-            </BrowserRouter>
+            </HashRouter>
         </Error>
     </Provider>
     , document.getElementById('root')

@@ -1,14 +1,15 @@
+const path = window.location.origin + window.location.pathname;
 export default [
     {
         id: 1,
         title: 'Icon Airflite Rubatone',
         price: 249.99,
         img: {
-            thumb: '/uploads/icon_airflite_rubatone_1.png',
+            thumb: path + '/uploads/icon_airflite_rubatone_1.png',
             gallery: [
-                '/uploads/icon_airflite_rubatone_1.png',
-                '/uploads/icon_airflite_rubatone_2.png',
-                '/uploads/icon_airflite_rubatone_3.png',
+                path + '/uploads/icon_airflite_rubatone_1.png',
+                path + '/uploads/icon_airflite_rubatone_2.png',
+                path + '/uploads/icon_airflite_rubatone_3.png',
 
             ],
         },
@@ -39,12 +40,12 @@ export default [
         title: 'Scorpion EXO R420',
         price: 149.95,
         img: {
-            thumb: '/uploads/scorpion_exo_r420_black.png',
+            thumb: path + '/uploads/scorpion_exo_r420_black.png',
             gallery: [
-                '/uploads/scorpion_exo_r420_black.png',
-                '/uploads/scorpion_exo_r420_matte_black.png',
-                '/uploads/scorpion_exo_r420_white.png',
-                '/uploads/scorpion_exo_r420_matte_titanium.png',
+                path + '/uploads/scorpion_exo_r420_black.png',
+                path + '/uploads/scorpion_exo_r420_matte_black.png',
+                path + '/uploads/scorpion_exo_r420_white.png',
+                path + '/uploads/scorpion_exo_r420_matte_titanium.png',
             ],
         },
         colors: ['black', 'matte-black', 'white', 'matte-titanium'],
@@ -70,12 +71,12 @@ export default [
         title: 'AGV Pista GP R Winter Test',
         price: 899.99,
         img: {
-            thumb: '/uploads/agv_pista_gpr_carbon_winter_test2018_1.png',
+            thumb: path + '/uploads/agv_pista_gpr_carbon_winter_test2018_1.png',
             gallery: [
-                '/uploads/agv_pista_gpr_carbon_winter_test2018_1.png',
-                '/uploads/agv_pista_gpr_carbon_winter_test2018_2.png',
-                '/uploads/agv_pista_gpr_carbon_winter_test2018_3.png',
-                '/uploads/agv_pista_gpr_carbon_winter_test2018_4.png',
+                path + '/uploads/agv_pista_gpr_carbon_winter_test2018_1.png',
+                path + '/uploads/agv_pista_gpr_carbon_winter_test2018_2.png',
+                path + '/uploads/agv_pista_gpr_carbon_winter_test2018_3.png',
+                path + '/uploads/agv_pista_gpr_carbon_winter_test2018_4.png',
             ],
         },
         colors: ['multicolor'],
@@ -113,11 +114,11 @@ export default [
         title: 'Scorpion EXO AT950 Neocon',
         price: 199.99,
         img: {
-            thumb: '/uploads/scorpion_exoat950_neocon_silver.png',
+            thumb: path + '/uploads/scorpion_exoat950_neocon_silver.png',
             gallery: [
-                '/uploads/scorpion_exoat950_neocon_silver.png',
-                '/uploads/scorpion_exoat950_neocon_red.png',
-                '/uploads/scorpion_exoat950_neocon_yellow.png'
+                path + '/uploads/scorpion_exoat950_neocon_silver.png',
+                path + '/uploads/scorpion_exoat950_neocon_red.png',
+                path + '/uploads/scorpion_exoat950_neocon_yellow.png'
             ],
         },
         colors: ['silver', 'orange', 'yellow'],
@@ -136,15 +137,15 @@ export default [
         preferences: [
             {
                 name: 'Full face helmet',
-                icon: '/uploads/icon_fullface.png',
+                icon: path + '/uploads/icon_fullface.png',
             },
             {
                 name: 'Anti fog technology',
-                icon: '/uploads/icon_antifog.png'
+                icon: path + '/uploads/icon_antifog.png'
             },
             {
                 name: 'Aerodynamic',
-                icon: '/uploads/icon_aerodynamic.png'
+                icon: path + '/uploads/icon_aerodynamic.png'
             },
         ]
     },
@@ -153,11 +154,11 @@ export default [
         title: 'Schuberth C3 Pro Gravity',
         price: 469.99,
         img: {
-            thumb: '/uploads/schuberth_c3_pro_gravity_red.png',
+            thumb: path + '/uploads/schuberth_c3_pro_gravity_red.png',
             gallery: [
-                '/uploads/schuberth_c3_pro_gravity_red.png',
-                '/uploads/schuberth_c3_pro_gravity_blue.png',
-                '/uploads/schuberth_c3_pro_gravity_yellow.png',
+                path + '/uploads/schuberth_c3_pro_gravity_red.png',
+                path + '/uploads/schuberth_c3_pro_gravity_blue.png',
+                path + '/uploads/schuberth_c3_pro_gravity_yellow.png',
             ],
         },
         colors: ['red', 'yellow', 'blue'],
@@ -182,9 +183,9 @@ export default [
         title: 'LS2 Valiant Black Chrome',
         price: 199.99,
         img: {
-            thumb: '/uploads/ls2_valiant_helmet_black_chrome.png',
+            thumb: path + '/uploads/ls2_valiant_helmet_black_chrome.png',
             gallery: [
-                '/uploads/ls2_valiant_helmet_black_chrome.png',
+                path + '/uploads/ls2_valiant_helmet_black_chrome.png',
             ],
         },
         colors: ['chrome'],
@@ -210,10 +211,10 @@ export default [
         title: 'Arai VX Pro 4',
         price: 548.95,
         img: {
-            thumb: '/uploads/arai_vx_pro4_black.png',
+            thumb: path + '/uploads/arai_vx_pro4_black.png',
             gallery: [
-                '/uploads/arai_vx_pro4_black.png',
-                '/uploads/arai_vx_pro4_white.png',
+                path + '/uploads/arai_vx_pro4_black.png',
+                path + '/uploads/arai_vx_pro4_white.png',
             ],
         },
         colors: ['black', 'white'],
@@ -234,11 +235,11 @@ export default [
         title: 'Shoei VFX EVO',
         price: 529,
         img: {
-            thumb: '/uploads/shoei_vfxevo_black.png',
+            thumb: path + '/uploads/shoei_vfxevo_black.png',
             gallery: [
-                '/uploads/shoei_vfxevo_black.png',
-                '/uploads/shoei_vfxevo_matte_black.png',
-                '/uploads/shoei_vfxevo_white.png',
+                path + '/uploads/shoei_vfxevo_black.png',
+                path + '/uploads/shoei_vfxevo_matte_black.png',
+                path + '/uploads/shoei_vfxevo_white.png',
             ],
         },
         colors: ['black', 'matte-black', 'white'],
@@ -261,11 +262,11 @@ export default [
         title: 'O\'Neal 5 Series Wingman',
         price: 99.99,
         img: {
-            thumb: '/uploads/o_neal5_series_wingman_1.png',
+            thumb: path + '/uploads/o_neal5_series_wingman_1.png',
             gallery: [
-                '/uploads/o_neal5_series_wingman_1.png',
-                '/uploads/o_neal5_series_wingman_2.png',
-                '/uploads/o_neal5_series_wingman_3.png',
+                path + '/uploads/o_neal5_series_wingman_1.png',
+                path + '/uploads/o_neal5_series_wingman_2.png',
+                path + '/uploads/o_neal5_series_wingman_3.png',
             ],
         },
         colors: ['multicolor'],
