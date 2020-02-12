@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f6e822a73b5009002fd4b192487c0eca",
+    "revision": "15c71b98699e7b7406be84fc2076e807",
     "url": "/Moto/index.html"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moto/static/css/6.95cca68a.chunk.css"
   },
   {
-    "revision": "874bee63f7c8ccaf8925",
+    "revision": "01cdb3672e46447b62d7",
     "url": "/Moto/static/css/main.715bcaa8.chunk.css"
   },
   {
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moto/static/js/7.1d6f2958.chunk.js"
   },
   {
-    "revision": "874bee63f7c8ccaf8925",
-    "url": "/Moto/static/js/main.5cc5e0b3.chunk.js"
+    "revision": "01cdb3672e46447b62d7",
+    "url": "/Moto/static/js/main.f2a4b501.chunk.js"
   },
   {
     "revision": "078cd664f764a35ef96c",
